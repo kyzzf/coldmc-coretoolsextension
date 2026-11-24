@@ -1,0 +1,6 @@
+build/
+*.jar
+.DS_Store
+# third-party: the decompiled PremiumAdvancements jar, and the Kotlin compiler and CFR
+inspect/
+tools/

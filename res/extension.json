@@ -1,0 +1,117 @@
+{
+ "entries": [
+  {
+   "id": "coretools_variable_fact",
+   "name": "coretools_variable_fact",
+   "description": "A per-profile number stored in a CoreTools player variable",
+   "color": "#5843e6",
+   "icon": "fa6-solid:user-tag",
+   "className": "se.coldmc.typewriter.coretools.CoreToolsVariableFact",
+   "extension": "CoreTools",
+   "tags": [
+    "readable-fact",
+    "writable-fact",
+    "fact",
+    "placeholder",
+    "static",
+    "entry"
+   ],
+   "dataBlueprint": {
+    "kind": "object",
+    "fields": {
+     "id": {
+      "kind": "primitive",
+      "type": "string"
+     },
+     "name": {
+      "kind": "primitive",
+      "type": "string"
+     },
+     "comment": {
+      "kind": "primitive",
+      "modifiers": [
+       {
+        "name": "help",
+        "data": "A comment to keep track of what this fact is used for."
+       },
+       {
+        "name": "multiline",
+        "data": null
+       },
+       {
+        "name": "help",
+        "data": "A comment to keep track of what this fact is used for."
+       },
+       {
+        "name": "multiline",
+        "data": null
+       }
+      ],
+      "type": "string"
+     },
+     "group": {
+      "kind": "custom",
+      "modifiers": [
+       {
+        "name": "entry",
+        "data": "group"
+       },
+       {
+        "name": "help",
+        "data": "If left empty, every player has its own group."
+       },
+       {
+        "name": "help",
+        "data": "If left empty, every player has its own group."
+       }
+      ],
+      "editor": "ref",
+      "shape": {
+       "kind": "primitive",
+       "type": "string"
+      }
+     },
+     "variable": {
+      "kind": "primitive",
+      "modifiers": [
+       {
+        "name": "help",
+        "data": "CoreTools variable id. Empty = the same as this entry's id. Must be declared in CoreTools/Variables/."
+       }
+      ],
+      "type": "string"
+     }
+    }
+   },
+   "contextKeys": [],
+   "modifiers": []
+  }
+ ],
+ "entryListeners": [],
+ "typewriterCommands": [],
+ "dependencyInjections": [
+  {
+   "kind": "class",
+   "className": "se.coldmc.typewriter.coretools.CoreToolsInitializer",
+   "type": "singleton"
+  }
+ ],
+ "globalContextKeys": [],
+ "extension": {
+  "name": "CoreTools",
+  "shortDescription": "Per-profile facts and advancements through CoreTools (ColdMC).",
+  "description": "ColdMC's own extension. coretools_variable_fact stores a fact in a CoreTools player variable, so it belongs to the selected MMOProfiles profile. It also keeps PremiumAdvancements progress per profile.",
+  "engineVersion": "0.9.0-beta-177",
+  "channel": "NONE",
+  "paper": {
+   "dependencies": [
+    "CoreTools",
+    "MMOProfiles"
+   ]
+  },
+  "pluginVersion": "2.2.0",
+  "version": "1.0.0",
+  "namespace": "coldmc",
+  "dependencies": []
+ }
+}
